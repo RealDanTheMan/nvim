@@ -4,4 +4,5 @@ require("mrdan.keymap")
 require("mrdan.options")
 require("mrdan.lazy")
 
-vim.cmd("colorscheme tokyonight")
+--vim.cmd("colorscheme tokyonight")
+require("colorbuddy").colorscheme("nvim-rdark")
