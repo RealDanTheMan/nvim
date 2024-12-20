@@ -13,6 +13,21 @@ return {
 					"lua_ls",
 				}
 			})
+			local lspconfig = require("lspconfig")
+			lspconfig.pyright.setup({
+				filetypes = {"python"},
+				capabilities = capabilities,
+				on_attach = on_attach,
+				settings = {
+					python = {
+						analysis = {
+							autoSearchPaths = true,
+							useLibraryCodeForTypes = true,
+							typeCheckingMode = "standard",
+						}
+					}
+				}
+			})
 		end,
 	}
 }
