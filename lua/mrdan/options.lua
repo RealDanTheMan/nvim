@@ -11,3 +11,5 @@ vim.opt.clipboard = "unnamedplus"
 
 vim.cmd("syntax on")
 vim.cmd("set termguicolors")
+vim.cmd("colorscheme pinkmare")
+--require("colorbuddy").colorscheme("nvim-rdark")
