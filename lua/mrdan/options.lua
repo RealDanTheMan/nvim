@@ -13,3 +13,7 @@ vim.cmd("syntax on")
 vim.cmd("set termguicolors")
 vim.cmd("colorscheme pinkmare")
 --require("colorbuddy").colorscheme("nvim-rdark")
+--
+--
+vim.env.TERM = "ghostty"
+vim.cmd("let $TERM = 'ghostty'")
