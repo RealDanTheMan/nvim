@@ -3,7 +3,8 @@ return {
 		"neovim/nvim-lspconfig",
 		dependencies = {
 			"williamboman/mason.nvim",
-			"williamboman/mason-lspconfig.nvim"
+			"williamboman/mason-lspconfig.nvim",
+			"saghen/blink.cmp"
 		},
 		config = function()
 			require("mason").setup()
@@ -15,22 +16,11 @@ return {
 				auto_update = true,
 				install_package_manager = "pacman"
 			})
+
+			local capabilities = require("blink.cmp").get_lsp_capabilities()
 			local lspconfig = require("lspconfig")
-			--lspconfig.pyright.setup({
-			--	filetypes = {"python"},
-			--	capabilities = capabilities,
-			--	on_attach = on_attach,
-			--	settings = {
-			--		python = {
-			--			analysis = {
-			--				autoSearchPaths = true,
-			--				useLibraryCodeForTypes = true,
-			--				typeCheckingMode = "standard",
-			--			}
-			--		}
-			--	}
-			--}),
 			lspconfig.pylsp.setup({
+				capabilities = capabilities,
 				settings = {
 					pylsp = {
 						plugins = {
