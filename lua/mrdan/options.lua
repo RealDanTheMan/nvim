@@ -7,8 +7,7 @@ vim.opt.autoindent = true
 vim.opt.textwidth = 100
 vim.opt.colorcolumn = "100"
 
-vim.opt.clipboard = "unnamedplus"
-
+vim.cmd("set clipboard+=unnamedplus")
 vim.cmd("syntax on")
 vim.cmd("set termguicolors")
 vim.cmd("colorscheme pinkmare")
