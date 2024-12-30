@@ -9,10 +9,11 @@ return {
 			require("mason").setup()
 			require("mason-lspconfig").setup({
 				ensure_installed = {
-					"pyright",
 					"pylsp",
 					"lua_ls",
-				}
+				},
+				auto_update = true,
+				install_package_manager = "pacman"
 			})
 			local lspconfig = require("lspconfig")
 			--lspconfig.pyright.setup({
