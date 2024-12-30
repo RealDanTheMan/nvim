@@ -1,5 +1,7 @@
 local vim = vim
 
+vim.keymap.set("t", "<esc><esc>", "<C-\\><C-n>")
+
 local magic = {
 	ctx = {
 		win = -1,
@@ -20,6 +22,8 @@ local function create_magic_term(opts)
 		buff = vim.api.nvim_create_buf(false, true)
 	end
 
+
+
 	local win_conf = {
 		relative = "editor",
 		width = width,
@@ -34,12 +38,20 @@ local function create_magic_term(opts)
 	return {win = win, buff=buff}
 end
 
-vim.api.nvim_create_user_command("MagicTerm", function ()
+local function toggle_magic_term()
 	if not vim.api.nvim_win_is_valid(magic.ctx.win) then
 		magic.ctx = create_magic_term({
 			buff=magic.ctx.buff
 		})
+
+		if vim.bo[magic.ctx.buff].buftype ~= "terminal" then
+			vim.cmd.terminal()
+		end
 	else
 		vim.api.nvim_win_hide(magic.ctx.win)
 	end
-end, {})
+
+end
+
+vim.api.nvim_create_user_command("MagicTerm", toggle_magic_term, {})
+vim.keymap.set({"n", "t"}, "<C-j>", toggle_magic_term)
