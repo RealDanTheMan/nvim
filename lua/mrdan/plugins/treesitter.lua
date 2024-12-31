@@ -21,13 +21,12 @@ return {
 				"glsl",
 			},
 			highlight = {
-				enabled = true,
+				enable = true,
 				additional_vim_regex_highlighting = false
 			},
-			indent = {enabled = true},
+			indent = {enable = true},
 			auto_install = true,
 			sync_install = true,
-
 		})
-	end,
+	end
 }
