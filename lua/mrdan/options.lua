@@ -10,7 +10,7 @@ vim.opt.colorcolumn = "100"
 vim.cmd("set clipboard+=unnamedplus")
 vim.cmd("syntax on")
 vim.cmd("set termguicolors")
-vim.cmd("colorscheme pinkmare")
+vim.cmd("colorscheme kanagawa-dragon")
 --require("colorbuddy").colorscheme("nvim-rdark")
 --
 --

@@ -11,5 +11,9 @@ return {
 	{
 		"matsuuu/pinkmare",
 		lazy = false
+	},
+	{
+		"rebelot/kanagawa.nvim",
+		lazy = false
 	}
 }
