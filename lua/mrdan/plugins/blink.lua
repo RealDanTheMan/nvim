@@ -13,7 +13,7 @@ return {
 				"lsp",
 				"path",
 				"snippets",
-				"buffer"
+				"buffer",
 			},
 		},
 		signature = { enabled = true },

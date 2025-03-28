@@ -12,6 +12,7 @@ return {
 				ensure_installed = {
 					"pylsp",
 					"lua_ls",
+					"clangd",
 				},
 				auto_update = true,
 				install_package_manager = "pacman"
@@ -64,6 +65,14 @@ return {
 					}
 				}
 			})
+
+			-- c/c++ LSP setup
+			lspconfig.clangd.setup({
+				cmd = {"clangd", "--background-index"},
+				on_attach = function(client, bufnr)
+				end,
+			})
+
 		end,
 	}
 }
