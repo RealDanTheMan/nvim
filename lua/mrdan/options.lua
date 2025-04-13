@@ -7,8 +7,14 @@ vim.opt.autoindent = true
 vim.opt.textwidth = 100
 vim.opt.colorcolumn = "100"
 
+vim.cmd("set clipboard+=unnamedplus")
+vim.cmd("syntax on")
+vim.cmd("set termguicolors")
+vim.cmd("colorscheme kanagawa-dragon")
+--require("colorbuddy").colorscheme("nvim-rdark")
+--
 -- Enable whitespace rendering
-vim.api.nvim_set_hl(0, 'Whitespace', { fg = '#111111' }) -- tweak this to your liking
+vim.api.nvim_set_hl(0, 'Whitespace', { fg = '#2A2A38' }) -- adjust to taste
 vim.opt.list = true
 vim.opt.listchars = {
   space = '·',
@@ -16,13 +22,6 @@ vim.opt.listchars = {
   trail = '•',
   eol = '↴',
 }
-
-vim.cmd("set clipboard+=unnamedplus")
-vim.cmd("syntax on")
-vim.cmd("set termguicolors")
-vim.cmd("colorscheme kanagawa-dragon")
---require("colorbuddy").colorscheme("nvim-rdark")
---
 --
 vim.env.TERM = "ghostty"
 vim.cmd("let $TERM = 'ghostty'")
