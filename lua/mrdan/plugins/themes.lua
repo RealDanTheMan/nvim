@@ -15,5 +15,9 @@ return {
 	{
 		"rebelot/kanagawa.nvim",
 		lazy = false
-	}
+	},
+    {
+        "rose-pine/neovim",
+        name = "rose-pine"
+    }
 }
