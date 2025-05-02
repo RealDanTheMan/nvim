@@ -11,7 +11,8 @@ vim.opt.colorcolumn = "100"
 vim.cmd("set clipboard+=unnamedplus")
 vim.cmd("syntax on")
 vim.cmd("set termguicolors")
-vim.cmd("colorscheme rose-pine")
+vim.cmd("colorscheme nordic")
+--vim.cmd("colorscheme rose-pine")
 --vim.cmd("colorscheme kanagawa-dragon")
 --require("colorbuddy").colorscheme("nvim-rdark")
 --

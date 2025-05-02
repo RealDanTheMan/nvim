@@ -19,5 +19,13 @@ return {
     {
         "rose-pine/neovim",
         name = "rose-pine"
+    },
+    {
+        "savq/melange-nvim",
+        lazy = false
+    },
+    {
+        "alexvzyl/nordic.nvim",
+        lazy = false
     }
 }
